@@ -1,0 +1,12 @@
+// Required
+$secondary: #4C4C4C;
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$font-family-sans-serif: "Comic Sans MS", cursive, sans-serif !default;
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+@import '../../node_modules/bootstrap/scss/bootstrap';
