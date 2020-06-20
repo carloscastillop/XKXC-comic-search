@@ -3,6 +3,14 @@ import style from './Comic.module.scss';
 import Image from './Image/Image';
 
 const Comic = () => {
+    const caption = (
+        <caption>
+            <title>Lorem ipsum dolor sit amet</title>
+            <alternate>
+                Lorem ipsum dolor sit amet
+            </alternate>
+        </caption>
+    );
     return (
         <section className={style.comicContainer} data-testid={'comic'}>
             <div className={style.container}>
@@ -17,7 +25,7 @@ const Comic = () => {
                         imageSrc={'https://via.placeholder.com/500x500'}
                         imageTitle={'test'}
                         imageAlt={'test'}
-                        imageCaption={'test'}
+                        imageCaption={caption}
                     />
                 </div>
                 <div>

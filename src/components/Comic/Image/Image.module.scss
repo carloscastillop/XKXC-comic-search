@@ -1,0 +1,42 @@
+@import '../../../styles/global.module';
+
+.imageContainer {
+  position: relative;
+  display: inline-block;
+  border: solid 1px green;
+
+  &:hover {
+    cursor: pointer;
+
+    .imageCaption {
+      display: block;
+    }
+  }
+
+  .imageCaption {
+    text-align: center;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+
+    title, caption, alternate {
+      display: block;
+    }
+
+    caption {
+      text-align: center;
+    }
+
+    title {
+      color: green
+    }
+
+    alternate {
+      color: pink
+    }
+  }
+}
