@@ -5,7 +5,13 @@ import PropTypes from 'prop-types';
 import style from './Image.module.scss';
 
 const Image = ({imageSrc, imageTitle, imageAlt, imageCaption}) => {
-    const caption = (imageCaption) ? <div className={style.imageCaption}>{imageCaption}</div> : null;
+    const caption = (imageCaption) ?
+        (<div className={style.imageCaptionContainer}>
+            <div className={style.imageCaption}>
+                {imageCaption}
+            </div>
+        </div>) : null;
+
     return (
         <React.Fragment>
             <div className={style.imageContainer}>
@@ -28,5 +34,5 @@ Image.propTypes = {
     imageSrc: PropTypes.string,
     imageTitle: PropTypes.string,
     imageAlt: PropTypes.string,
-    imageCaption: PropTypes.string
+    imageCaption: PropTypes.object
 };

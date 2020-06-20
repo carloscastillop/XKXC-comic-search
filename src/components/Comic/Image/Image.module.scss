@@ -3,39 +3,46 @@
 .imageContainer {
   position: relative;
   display: inline-block;
-  border: solid 1px green;
 
   &:hover {
     cursor: pointer;
 
-    .imageCaption {
+    .imageCaptionContainer {
       display: block;
     }
   }
 
-  .imageCaption {
+  .imageCaptionContainer {
     text-align: center;
     display: none;
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
+    border: solid 1px green;
 
 
-    title, caption, alternate {
+    title, .imageCaption, span {
       display: block;
     }
 
-    caption {
+    .imageCaption {
       text-align: center;
+      margin: 0;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      padding: $spacer;
     }
 
     title {
       color: green
     }
 
-    alternate {
+    span {
       color: pink
     }
   }

@@ -1,46 +1,45 @@
 import React from 'react';
 import style from './Comic.module.scss';
 import Image from './Image/Image';
+import PropTypes from 'prop-types';
 
-const Comic = () => {
+const Comic = ({comic: {title, alt, img, num}}) => {
     const caption = (
-        <caption>
-            <title>Lorem ipsum dolor sit amet</title>
-            <alternate>
-                Lorem ipsum dolor sit amet
-            </alternate>
-        </caption>
+        <>
+            <title>{title}</title>
+            <span>
+                {alt}
+            </span>
+        </>
     );
     return (
         <section className={style.comicContainer} data-testid={'comic'}>
             <div className={style.container}>
-                <h1>Comic title</h1>
-                <h4>
+                <h1 className={`${style.h2} ${style['my-4']} animated fadeInUp`}>
+                    {title}
+                </h1>
+                <h4 className={'animated fadeIn'}>
                     <span className={`${style['badge']} ${style['badge-secondary']}`}>
-                        #12345
+                        #{num}
                     </span>
                 </h4>
                 <div className={style['mb-3']}>
-                    <Image
-                        imageSrc={'https://via.placeholder.com/500x500'}
-                        imageTitle={'test'}
-                        imageAlt={'test'}
-                        imageCaption={caption}
-                    />
+                    <a
+                        href={`//xkcd.com/${num}`}
+                        title={title}
+                        rel="noreferrer"
+                    >
+                        <Image
+                            imageSrc={img}
+                            imageTitle={title}
+                            imageAlt={title}
+                            imageCaption={caption}
+                        />
+                    </a>
                 </div>
                 <div>
-                    <p>
-                        Lorem Ipsum
-                        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
-                        adipisci
-                        velit... There is no one who loves pain itself, who seeks after it and wants to
-                        have
-                        it,
-                        simply
-                        because it is pain... Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Curabitur
-                        enim odio, posuere eu
-                        euismod vitae, malesuada vitae eros.
+                    <p className={'animated fadeInUp'}>
+                        {alt}
                     </p>
                 </div>
             </div>
@@ -49,3 +48,7 @@ const Comic = () => {
 };
 
 export default Comic;
+
+Comic.propTypes = {
+    comic: PropTypes.object.isRequired
+};

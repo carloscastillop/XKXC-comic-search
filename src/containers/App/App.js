@@ -7,7 +7,7 @@ import {
 import style from './App.module.scss';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-import Comic from "../../components/Comic/Comic";
+import Latest from '../Latest/Latest';
 
 function App() {
     return (
@@ -16,7 +16,7 @@ function App() {
                 <Header/>
                 <Switch>
                     <Route exact path="/">
-                        <Comic />
+                        <Latest />
                     </Route>
                 </Switch>
                 <Footer/>
