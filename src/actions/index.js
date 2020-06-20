@@ -1,7 +1,7 @@
 import {FETCH_COMIC, FETCH_ERROR} from './types';
 import axios from 'axios';
 
-const apiUrl = 'https://xkcd.now.sh/?comic=';
+const apiUrl = 'https://xkcd.now.sh/?comic='; //latest or 1000
 
 export const fetchComic = (comics) => {
     return {
