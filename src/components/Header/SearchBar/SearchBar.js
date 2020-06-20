@@ -59,7 +59,8 @@ const SearchBar = ({handleToggleSearchBar, comic}) => {
                     <button
                         className={`${style['btn']} ${style['btn-secondary']} ${(!validateInputClass()) ? style['disabled'] : ''}`}
                         id='searchBarBtn'
-                        aria-label='Search'
+                        aria-label='Search comic'
+                        title='Search comic'
                         disabled={(!validateInputClass()) ? true : false}
                         onClick={() => handleSearchComic()}
                     >

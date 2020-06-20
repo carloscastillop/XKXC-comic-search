@@ -13,7 +13,8 @@ const TopHeader = ({handleToggleSearchBar, toggleSearch}) => {
             <Logo/>
             <div className={style.search}>
                 <button
-                    aria-label='toogle Search comic'
+                    aria-label='Toogle search bar'
+                    title='Toogle search bar'
                     className={`${style.btn} ${style['btn-sm']} ${style['btn-outline-secondary']} ${style['mt-2']}`}
                     onClick={() => handleToggleSearchBar()}
                 >

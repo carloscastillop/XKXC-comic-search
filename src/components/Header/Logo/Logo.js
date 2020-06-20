@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 const Logo = () => {
     return (
-        <Link to='/' className={`${style.logoContainer}`}>
+        <Link to='/' className={`${style.logoContainer}`} title={'XKXC comic search'}>
             <span className={`${style.btn} ${style['btn-outline-secondary']}`}>
                 <i className='fas fa-home'></i>
             </span>
