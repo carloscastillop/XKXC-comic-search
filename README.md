@@ -1,6 +1,7 @@
 ![XKXC](https://xkcd.com/s/0b7742.png)
 
 #XKXC comic search
+
 This projects retrieve the last comic number and search for a comic by comic number.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
