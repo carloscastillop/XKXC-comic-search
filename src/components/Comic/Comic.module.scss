@@ -1,0 +1,11 @@
+@import '../../styles/global.module';
+
+.comicContainer {
+  text-align: center;
+  h1 {
+    color: #fff;
+  }
+  p {
+    color: rgba(255,255,255,0.5);
+  }
+}

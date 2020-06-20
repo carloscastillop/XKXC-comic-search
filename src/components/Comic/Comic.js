@@ -1,9 +1,10 @@
 import React from 'react';
-import style from '../../containers/App/App.module.scss';
+import style from './Comic.module.scss';
+import Image from './Image/Image';
 
 const Comic = () => {
     return (
-        <section data-testid={'comic'}>
+        <section className={style.comicContainer} data-testid={'comic'}>
             <div className={style.container}>
                 <h1>Comic title</h1>
                 <h4>
@@ -12,10 +13,11 @@ const Comic = () => {
                     </span>
                 </h4>
                 <div className={style['mb-3']}>
-                    <img
-                        className={style['img-fluid']}
-                        src={'https://via.placeholder.com/500x500'}
-                        alt={'test'}
+                    <Image
+                        imageSrc={'https://via.placeholder.com/500x500'}
+                        imageTitle={'test'}
+                        imageAlt={'test'}
+                        imageCaption={'test'}
                     />
                 </div>
                 <div>
