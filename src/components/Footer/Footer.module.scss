@@ -1,0 +1,14 @@
+@import '../../styles/global.module.scss';
+
+.footer {
+  margin-top: $spacer * 2;
+  padding: $spacer * 2;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.2);
+  border-top: dotted 1px rgba(255, 255, 255, 0.1);
+
+  p {
+    font-size: 90%;
+    margin: 0;
+  }
+}

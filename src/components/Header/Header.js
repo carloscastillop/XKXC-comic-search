@@ -11,7 +11,7 @@ const Header = () => {
     };
 
     return (
-        <header>
+        <header data-test={'header'}>
             <div className={style.container}>
                 <TopHeader
                     handleToggleSearchBar={handleToggleSearchBar}
