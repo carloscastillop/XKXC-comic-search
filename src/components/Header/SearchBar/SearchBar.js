@@ -25,7 +25,7 @@ const SearchBar = ({handleToggleSearchBar, comic}) => {
     const textInput = useRef(null);
     return (
         <div
-            className={`${style.searchBar} animated fadeInDown`}
+            className={`${style.searchBar} animated fadeIn`}
         >
             <div
                 className={style.searchLayout}

@@ -1,11 +1,12 @@
 import React from 'react';
-import style from './App.module.scss';
-import Header from '../../components/Header/Header';
 import {
     BrowserRouter as Router,
     Switch,
     Route
 } from 'react-router-dom';
+import style from './App.module.scss';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 
 function App() {
     return (
@@ -18,9 +19,9 @@ function App() {
                             <div className={style.container}>
                                 <h1>Comic title</h1>
                                 <h4>
-                                <span className={`${style['badge']} ${style['badge-secondary']}`}>
-                                    #12345
-                                </span>
+                                    <span className={`${style['badge']} ${style['badge-secondary']}`}>
+                                        #12345
+                                    </span>
                                 </h4>
                                 <div className={style['mb-3']}>
                                     <img
@@ -48,15 +49,7 @@ function App() {
                         </section>
                     </Route>
                 </Switch>
-                <footer
-                    className={`${style['py-5']}`}
-                >
-                    <div
-                        className={`${style['container']} ${style['text-muted']}`}
-                    >
-                        <p>Name app</p>
-                    </div>
-                </footer>
+                <Footer/>
             </div>
         </Router>
     );
