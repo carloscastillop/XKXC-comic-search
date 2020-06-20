@@ -1,7 +1,7 @@
 import {FETCH_COMIC, FETCH_ERROR} from './types';
 import axios from 'axios';
 
-const apiUrl = 'https://xkcd.now.sh/?comic=latest';
+const apiUrl = 'https://xkcd.now.sh/?comic=';
 
 export const fetchComic = (comics) => {
     return {
@@ -17,11 +17,11 @@ export const fetchError = (error) => {
     };
 };
 
-export const fetchComics = () => {
+export const fetchComics = (num = 'latest') => {
     return (dispatch) => {
         dispatch(fetchComic(null));
         dispatch(fetchError(false));
-        return axios.get(apiUrl, {
+        return axios.get(apiUrl+num, {
             crossDomain: true,
             dataType: 'json',
             logLevel: 'debug',
