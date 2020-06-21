@@ -14,7 +14,7 @@ const Image = ({imageSrc, imageTitle, imageAlt, imageCaption}) => {
 
     return (
         <React.Fragment>
-            <div className={style.imageContainer}>
+            <div className={style.imageContainer} data-testid={'image'}>
                 <LazyLoadImage
                     className={`${style['img-fluid']}`}
                     src={imageSrc}
