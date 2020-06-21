@@ -3,7 +3,7 @@ import style from './TopHeader.module.scss';
 import PropTypes from 'prop-types';
 import Logo from '../Logo/Logo';
 
-const TopHeader = ({handleToggleSearchBar, toggleSearch}) => {
+const TopHeader = ({setToggleSearch, toggleSearch}) => {
     let iconBtn = (<i className='fas fa-search'></i>);
     if (toggleSearch) {
         iconBtn = (<i className='fas fa-times'></i>);
@@ -16,7 +16,7 @@ const TopHeader = ({handleToggleSearchBar, toggleSearch}) => {
                     aria-label='Toogle search bar'
                     title='Toogle search bar'
                     className={`${style.btn} ${style['btn-sm']} ${style['btn-outline-secondary']} ${style['mt-2']}`}
-                    onClick={() => handleToggleSearchBar()}
+                    onClick={() => setToggleSearch(!toggleSearch)}
                 >
                     {iconBtn}
                 </button>
@@ -27,6 +27,6 @@ const TopHeader = ({handleToggleSearchBar, toggleSearch}) => {
 export default TopHeader;
 
 TopHeader.propTypes = {
-    handleToggleSearchBar: PropTypes.func,
+    setToggleSearch: PropTypes.func,
     toggleSearch: PropTypes.bool
 };

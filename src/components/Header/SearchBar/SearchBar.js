@@ -4,7 +4,7 @@ import {useHistory} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
-const SearchBar = ({handleToggleSearchBar, comic}) => {
+const SearchBar = ({setToggleSearch, toggleSearch, comic}) => {
     const [inputSearch, setInputSearch] = useState('');
     let history = useHistory();
     const validateInputClass = () => {
@@ -18,7 +18,7 @@ const SearchBar = ({handleToggleSearchBar, comic}) => {
     };
     const handleSearchComic = () => {
         setInputSearch('');
-        handleToggleSearchBar(false);
+        setToggleSearch(false);
         return history.push(`/${inputSearch}`);
     };
     const textInput = useRef(null);
@@ -28,7 +28,7 @@ const SearchBar = ({handleToggleSearchBar, comic}) => {
         >
             <div
                 className={style.searchLayout}
-                onClick={() => handleToggleSearchBar()}
+                onClick={() => setToggleSearch(!toggleSearch)}
             ></div>
             <div className={`${style['input-group']} ${style['input-group-lg']}`}>
                 <div className={`${style['input-group-prepend']}`}>
@@ -88,6 +88,7 @@ export default connect(
 )(SearchBar);
 
 SearchBar.propTypes = {
-    handleToggleSearchBar: PropTypes.func,
+    setToggleSearch: PropTypes.func,
+    toggleSearch: PropTypes.bool,
     comic: PropTypes.object
 };

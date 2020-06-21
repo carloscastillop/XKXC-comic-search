@@ -6,20 +6,18 @@ import TopHeader from './TopHeader/TopHeader';
 
 const Header = () => {
     const [toggleSearch, setToggleSearch] = useState(false);
-    const handleToggleSearchBar = () => {
-        setToggleSearch(!toggleSearch);
-    };
 
     return (
         <header data-test={'header'}>
             <div className={style.container}>
                 <TopHeader
-                    handleToggleSearchBar={handleToggleSearchBar}
+                    setToggleSearch={setToggleSearch}
                     toggleSearch={toggleSearch}
                 />
                 {toggleSearch &&
                 <SearchBar
-                    handleToggleSearchBar={handleToggleSearchBar}
+                    setToggleSearch={setToggleSearch}
+                    toggleSearch={toggleSearch}
                 />
                 }
             </div>
