@@ -83,6 +83,12 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 [read more](https://create-react-app.dev/docs/available-scripts/#npm-run-eject)
 
+### Next steps?
+
+- Add share buttons
+- Add favourites
+- Improve tests
+- Break 'more' The UI Into A Component Hierarchy
 
 # Thanks!!!
 
