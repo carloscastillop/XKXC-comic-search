@@ -1,12 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
+import {useParams} from 'react-router-dom';
+import {connect, useDispatch} from 'react-redux';
+import {fetchComics} from '../../actions/index';
 import style from '../../styles/global.module.scss';
 import Comic from '../../components/Comic/Comic';
 import Loading from '../../components/Loading/Loading';
 import Error from '../../components/Error/Error';
 
-function Latest({comic, error}) {
+const SearchResult = ({comic, error}) => {
+    let {num} = useParams();
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchComics(num));
+    }, [num, dispatch]);
 
     if (error) {
         return (<Error/>);
@@ -17,7 +25,7 @@ function Latest({comic, error}) {
     }
     return (
         <section
-            data-testid={'latest'}
+            data-testid={'search-result'}
             className={`${style.container} ${style['text-center']}`}
         >
             <Comic
@@ -25,7 +33,7 @@ function Latest({comic, error}) {
             />
         </section>
     );
-}
+};
 
 const mapStateToProps = state => {
     return {
@@ -36,9 +44,9 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps
-)(Latest);
+)(SearchResult);
 
-Latest.propTypes = {
+SearchResult.propTypes = {
     comic: PropTypes.object,
     error: PropTypes.bool
 };
