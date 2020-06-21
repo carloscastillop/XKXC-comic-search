@@ -20,7 +20,9 @@ const Comic = ({comic: {title, alt, img, num}, latestComic}) => {
     return (
         <section className={style.comicContainer} data-testid={'comic'}>
             <div className={style.container}>
-                <h1 className={`${style.h2} ${style['my-4']} animated fadeInUp`}>
+                <h1
+                    data-testid={'comic-title'}
+                    className={`${style.h2} ${style['my-4']} animated fadeInUp`}>
                     {title}
                 </h1>
                 <h4 className={'animated fadeIn'}>
