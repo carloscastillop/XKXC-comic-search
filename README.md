@@ -2,13 +2,40 @@
 
 # XKXC comic search
 
-This projects retrieve the last comic number and search for a comic by comic number.
+Hi!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This projects retrieve the last comic number and search for a comic by comic number. 
+And you can navigate trough comic number aswell.
 
-## Example
+Made with love!
 
-You can see an running example by clicking here
+```Spent time: 4.5 hours```
+
+
+### Technologies/packages
+
+- React
+- Create React App - bootstrapped
+- Redux
+- ESlint (Using the Recommended+React/Recommended config.)
+- Prettier
+- Axios
+- Redux-thunk
+- Prop-types
+- Styling
+  - Bootstrap 4.2
+  - Animate Css
+  - FontAwesome
+- Testing
+  - Jest
+  - E2E Test Cafe  
+- Deployment
+  - GH-pages
+
+
+### Example
+
+You can see the running example by clicking here
 
 https://carloscastillop.github.io/XKXC-comic-search
 
@@ -21,13 +48,10 @@ In the project directory, you can run:
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run testcafe` or 
 `testcafe chrome E2E_test/e2e.js`
@@ -36,7 +60,12 @@ Launches the E2E test runner usng Testcafe.
 [Visit documentation](https://devexpress.github.io/testcafe/documentation/getting-started/) for more information.
 
 ### `npm run lint`
-Run lint validation using ESlint 
+Run lint validation using ESlint in Recommended config.
+- Rules
+  - indent: 4
+  - linebreak-style: unix
+  - quotes: single
+  - semi: always
 
 ### `npm run build`
 
@@ -55,4 +84,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 [read more](https://create-react-app.dev/docs/available-scripts/#npm-run-eject)
 
 
+# Thanks!!!
 
