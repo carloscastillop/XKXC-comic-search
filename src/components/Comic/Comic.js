@@ -52,7 +52,7 @@ const Comic = ({comic: {title, alt, img, num}, latestComic}) => {
                 <div>
                     <p
                         data-testid={'comic-alt'}
-                        className={'animated fadeInUp'}>
+                        className={'animated fadeInDown'}>
                         {alt}
                     </p>
                 </div>
