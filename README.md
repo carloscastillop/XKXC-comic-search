@@ -6,6 +6,12 @@ This projects retrieve the last comic number and search for a comic by comic num
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Example
+
+You can see an running example by clicking here
+
+https://carloscastillop.github.io/XKXC-comic-search
+
 ## Available Scripts
 
 In the project directory, you can run:

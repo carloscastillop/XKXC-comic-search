@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore, applyMiddleware, compose} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
 import rootReducer from './reducers';
@@ -12,10 +12,7 @@ import ErrorBoundary from './ErrorBoundary';
 
 const store = createStore(
     rootReducer,
-    compose(
-        applyMiddleware(thunk),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-    )
+    applyMiddleware(thunk)
 );
 store.dispatch(fetchComics());
 

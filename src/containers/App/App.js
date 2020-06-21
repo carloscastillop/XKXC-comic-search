@@ -2,7 +2,8 @@ import React from 'react';
 import {
     BrowserRouter as Router,
     Switch,
-    Route
+    Route,
+    HashRouter,
 } from 'react-router-dom';
 import style from './App.module.scss';
 import Header from '../../components/Header/Header';
@@ -12,7 +13,7 @@ import SearchResult from '../SearchResult/SearchResult';
 
 function App() {
     return (
-        <Router>
+        <HashRouter basename='/XKXC-comic-search/'>
             <div className={style.App} data-testid={'App'}>
                 <Header/>
                 <Switch>
@@ -25,7 +26,7 @@ function App() {
                 </Switch>
                 <Footer/>
             </div>
-        </Router>
+        </HashRouter>
     );
 }
 

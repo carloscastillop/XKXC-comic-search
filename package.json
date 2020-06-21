@@ -2,6 +2,7 @@
   "name": "xkxc-comic-search",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://carloscastillop.github.io/XKXC-comic-search",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -24,7 +25,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
-    "testcafe": "testcafe chrome ./src/E2E_tests/e2e.js"
+    "testcafe": "testcafe chrome ./src/E2E_tests/e2e.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,6 +47,7 @@
   "devDependencies": {
     "eslint": "^6.6.0",
     "eslint-plugin-react": "^7.20.0",
+    "gh-pages": "^3.1.0",
     "moxios": "^0.4.0",
     "prettier": "2.0.5",
     "react-redux": "^7.2.0",
