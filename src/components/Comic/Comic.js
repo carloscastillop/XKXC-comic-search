@@ -54,8 +54,8 @@ const Comic = ({comic: {title, alt, img, num}, latestComic}) => {
 };
 
 Comic.propTypes = {
-    comic: PropTypes.object.isRequired,
-    latestComic: PropTypes.object.isRequired
+    comic: PropTypes.object,
+    latestComic: PropTypes.object
 };
 
 const mapStateToProps = state => {

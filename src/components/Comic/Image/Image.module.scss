@@ -20,7 +20,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    border: solid 1px green;
+    border: solid 1px $secondary;
 
 
     title, .imageCaption, span {
@@ -39,11 +39,14 @@
     }
 
     title {
-      color: green
+      color: #fff;
+      font-size: $h3-font-size;
+      margin-bottom: $spacer;
     }
 
     span {
-      color: pink
+      color: #ccc;
+      font-size: $small-font-size;
     }
   }
 }
