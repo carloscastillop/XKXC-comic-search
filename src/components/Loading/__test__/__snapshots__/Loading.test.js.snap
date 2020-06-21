@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading snapshop 1`] = `
+<div
+  className="spinner"
+  data-testid="loading"
+>
+  <div
+    className="doubleBounce1"
+  />
+  <div
+    className="doubleBounce2"
+  />
+</div>
+`;

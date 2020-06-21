@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer snapshop 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="container text-muted"
+  >
+    <p>
+      XKXC comic search
+    </p>
+  </div>
+</footer>
+`;

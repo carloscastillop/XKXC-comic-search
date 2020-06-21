@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comic snapshop 1`] = `
+<section
+  className="comicContainer"
+  data-testid="comic"
+>
+  <div
+    className="container"
+  >
+    <h1
+      className="h2 my-4 animated fadeInUp"
+    />
+    <h4
+      className="animated fadeIn"
+    >
+      <span
+        className="badge badge-secondary"
+      >
+        #
+      </span>
+    </h4>
+    <div
+      className="mb-3"
+    >
+      <a
+        href="//xkcd.com/undefined"
+        rel="noreferrer"
+      >
+        <div
+          className="imageContainer"
+          data-testid="image"
+        >
+          <span
+            className=" lazy-load-image-background blur"
+            style={
+              Object {
+                "backgroundImage": "",
+                "backgroundSize": "",
+                "color": "transparent",
+                "display": "inline-block",
+                "height": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <span
+              className="img-fluid"
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            />
+          </span>
+          <div
+            className="imageCaptionContainer"
+          >
+            <div
+              className="imageCaption"
+            >
+              <title />
+              <span />
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <p
+        className="animated fadeInUp"
+      />
+    </div>
+  </div>
+</section>
+`;

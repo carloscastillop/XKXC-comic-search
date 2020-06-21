@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header snapshop 1`] = `
+<header
+  data-test="header"
+>
+  <div
+    className="container"
+  >
+    <a
+      className="logoContainer"
+      href="/"
+      onClick={[Function]}
+      title="XKXC comic search"
+    >
+      <span
+        className="btn btn-outline-secondary"
+      >
+        <i
+          className="fas fa-home"
+        />
+      </span>
+      <img
+        alt="logo"
+        className="logo img-fluid"
+        src="logo_2.png"
+      />
+      <h3>
+        XKXC comic search
+      </h3>
+    </a>
+    <div
+      className="search"
+    >
+      <button
+        aria-label="Toogle search bar"
+        className="btn btn-sm btn-outline-secondary mt-2"
+        onClick={[Function]}
+        title="Toogle search bar"
+      >
+        <i
+          className="fas fa-search"
+        />
+      </button>
+    </div>
+  </div>
+</header>
+`;

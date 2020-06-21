@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Latest comic snapshop 1`] = `
+<section
+  className="container text-center"
+  data-testid="latest"
+>
+  <div
+    className="spinner"
+    data-testid="loading"
+  >
+    <div
+      className="doubleBounce1"
+    />
+    <div
+      className="doubleBounce2"
+    />
+  </div>
+</section>
+`;

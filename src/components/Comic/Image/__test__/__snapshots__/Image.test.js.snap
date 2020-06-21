@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image snapshop 1`] = `
+<div
+  className="imageContainer"
+  data-testid="image"
+>
+  <span
+    className=" lazy-load-image-background blur"
+    style={
+      Object {
+        "backgroundImage": "",
+        "backgroundSize": "",
+        "color": "transparent",
+        "display": "inline-block",
+        "height": undefined,
+        "width": undefined,
+      }
+    }
+  >
+    <span
+      className="img-fluid"
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
+    />
+  </span>
+</div>
+`;

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search result comic snapshop 1`] = `
+<section
+  className="container text-center"
+  data-testid="search-result"
+>
+  <div
+    className="spinner"
+    data-testid="loading"
+  >
+    <div
+      className="doubleBounce1"
+    />
+    <div
+      className="doubleBounce2"
+    />
+  </div>
+</section>
+`;

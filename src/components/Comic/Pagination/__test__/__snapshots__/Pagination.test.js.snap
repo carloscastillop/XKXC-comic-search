@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination snapshop 1`] = `
+<div
+  className="comicPagination mt-5"
+  data-testid="pagination"
+>
+  <nav
+    aria-label="Comics page navigation"
+  >
+    <ul
+      className="pagination justify-content-center"
+    >
+      <li
+        className="page-item disabled pageDisabled"
+      >
+        <a
+          aria-disabled={true}
+          className="page-link"
+          href="/0"
+          onClick={[Function]}
+          tabIndex="-1"
+        >
+          Previous
+        </a>
+      </li>
+      <li
+        className="page-item "
+      >
+        <a
+          aria-disabled=""
+          className="page-link"
+          href="/2"
+          onClick={[Function]}
+        >
+          Next
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
