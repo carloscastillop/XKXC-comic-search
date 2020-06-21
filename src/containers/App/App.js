@@ -12,7 +12,7 @@ import Latest from '../Latest/Latest';
 function App() {
     return (
         <Router>
-            <div className={style.App}>
+            <div className={style.App} data-testid={'App'}>
                 <Header/>
                 <Switch>
                     <Route exact path="/">
