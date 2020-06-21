@@ -54,7 +54,7 @@
     "react-test-renderer": "^16.13.1",
     "redux": "^4.0.5",
     "redux-mock-store": "^1.5.4",
-    "testcafe": "^1.4.0",
-    "testcafe-reporter-xunit": "^2.1.0"
+    "testcafe": "^1.8.6",
+    "testcafe-react-selectors": "^4.0.0"
   }
 }
