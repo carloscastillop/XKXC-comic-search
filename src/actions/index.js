@@ -3,17 +3,17 @@ import axios from 'axios';
 
 const apiUrl = 'https://xkcd.now.sh/?comic='; //latest or 1000
 
-export const fetchComic = (comics) => {
+export const fetchComic = (comic) => {
     return {
         type: FETCH_COMIC,
-        comics
+        comic
     };
 };
 
 export const latestComic = (comic) => {
     return {
         type: LATEST_COMIC,
-        comic //data
+        comic
     };
 };
 

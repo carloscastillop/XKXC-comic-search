@@ -1,7 +1,7 @@
-jest.mock('axios');
 import * as actions from '../index';
 import * as types from '../types';
 import axios from 'axios';
+jest.mock('axios');
 
 const test = {
     'num': 12345,
@@ -9,6 +9,7 @@ const test = {
     'img': 'https://imgs.xkcd.com/comics/iso_paper_size_golden_spiral.png',
     'title': 'Comic title'
 };
+
 describe('actions', () => {
     it('fetches successfully data from an API fetchComics', async () => {
         axios.get.mockImplementationOnce(() => Promise.resolve());
@@ -18,9 +19,17 @@ describe('actions', () => {
     it('fetchComic', () => {
         const expectedAction = {
             type: types.FETCH_COMIC,
-            comics: test
+            comic: test
         };
         expect(actions.fetchComic(test)).toEqual(expectedAction);
+    });
+
+    it('latestComic', () => {
+        const expectedAction = {
+            type: types.LATEST_COMIC,
+            comic: test
+        };
+        expect(actions.latestComic(test)).toEqual(expectedAction);
     });
 
     it('fetchError', () => {
@@ -30,4 +39,5 @@ describe('actions', () => {
         };
         expect(actions.fetchError(test)).toEqual(expectedAction);
     });
+
 });

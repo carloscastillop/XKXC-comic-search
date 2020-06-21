@@ -16,21 +16,23 @@ const SearchResult = ({comic, error}) => {
         dispatch(fetchComics(num));
     }, [num, dispatch]);
 
+    let latestComic = null;
     if (error) {
-        return (<Error/>);
+        latestComic = <Error/>;
     }
-
-    if (!comic) {
-        return (<Loading/>);
+    else if (!comic) {
+        latestComic = <Loading/>;
+    } else {
+        latestComic = <Comic
+            comic={comic}
+        />;
     }
     return (
         <section
             data-testid={'search-result'}
             className={`${style.container} ${style['text-center']}`}
         >
-            <Comic
-                comic={comic}
-            />
+            {latestComic}
         </section>
     );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 import Header from '../Header';
+import renderer from 'react-test-renderer';
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
@@ -12,4 +13,15 @@ it('renders without crashing', () => {
         div
     );
     ReactDOM.unmountComponentAtNode(div);
+});
+
+test('Header snapshop', () => {
+    const tree = renderer
+        .create(
+            <BrowserRouter>
+                <Header/>
+            </BrowserRouter>
+        )
+        .toJSON();
+    expect(tree).toMatchSnapshot();
 });

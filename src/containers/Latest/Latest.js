@@ -1,28 +1,37 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
+import {connect, useDispatch} from 'react-redux';
 import style from '../../styles/global.module.scss';
 import Comic from '../../components/Comic/Comic';
 import Loading from '../../components/Loading/Loading';
 import Error from '../../components/Error/Error';
+import {fetchError} from '../../actions';
 
 function Latest({comic, error}) {
 
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchError(false));
+    }, [dispatch]);
+
+    let latestComic = null;
     if (error) {
-        return (<Error/>);
+        latestComic = <Error/>;
+    }
+    else if (!comic) {
+        latestComic = <Loading/>;
+    } else {
+        latestComic = <Comic
+            comic={comic}
+        />;
     }
 
-    if (!comic) {
-        return (<Loading/>);
-    }
     return (
         <section
             data-testid={'latest'}
             className={`${style.container} ${style['text-center']}`}
         >
-            <Comic
-                comic={comic}
-            />
+            {latestComic}
         </section>
     );
 }

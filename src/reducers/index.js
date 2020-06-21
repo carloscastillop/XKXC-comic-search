@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import comics from './comicReducer';
+import comicReducer from './comicReducer';
 import errorComicReducer from './errorComicReducer';
-import latestComicReducer from "./latestComicReducer";
+import latestComicReducer from './latestComicReducer';
 
 export default combineReducers({
-    fetchComic: comics,
+    fetchComic: comicReducer,
     latestComic: latestComicReducer,
     fetchError: errorComicReducer
 });

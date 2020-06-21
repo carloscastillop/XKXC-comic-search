@@ -17,14 +17,14 @@ describe('all Reducers', () => {
         expect(
             comicReducer([], {
                 type: types.FETCH_COMIC,
-                comics: test
+                comic: test
             })
         ).toEqual(test);
 
         expect(
             comicReducer(test, {
                 type: types.FETCH_COMIC,
-                comics: test
+                comic: test
             })
         ).toEqual(test);
     });
