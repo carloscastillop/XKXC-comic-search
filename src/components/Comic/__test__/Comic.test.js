@@ -2,7 +2,16 @@ import React from 'react';
 import {render} from '@testing-library/react';
 import Comic from '../Comic';
 import renderer from 'react-test-renderer';
+import {applyMiddleware, createStore} from 'redux';
+import rootReducer from '../../../reducers';
+import thunk from 'redux-thunk';
+import {latestComic} from '../../../actions';
+import {Provider} from "react-redux";
 
+const store = createStore(
+    rootReducer,
+    applyMiddleware(thunk)
+);
 const comic = {
     comic: {
         title: 'image alt text',
@@ -13,15 +22,22 @@ const comic = {
 };
 
 test('Get Comic container', () => {
-    const {getByTestId} = render(<Comic comic={comic}/>);
+    store.dispatch(latestComic(comic));
+    const {getByTestId} = render(
+        <Provider store={store}>
+            <Comic comic={comic} latestComic={comic}/>
+        </Provider>);
     const linkElement = getByTestId('comic');
     expect(linkElement).toBeInTheDocument();
 });
 
-
 test('Comic snapshop', () => {
     const tree = renderer
-        .create(<Comic comic={comic}/>)
+        .create(
+            <Provider store={store}>
+                <Comic comic={comic} latestComic={comic}/>
+            </Provider>
+        )
         .toJSON();
     expect(tree).toMatchSnapshot();
 });

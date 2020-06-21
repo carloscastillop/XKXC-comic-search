@@ -2,8 +2,10 @@ import React from 'react';
 import style from './Comic.module.scss';
 import Image from './Image/Image';
 import PropTypes from 'prop-types';
+import Pagination from './Pagination/Pagination';
+import {connect} from 'react-redux';
 
-const Comic = ({comic: {title, alt, img, num}}) => {
+const Comic = ({comic: {title, alt, img, num}, latestComic}) => {
     const caption = (
         <>
             <title>{title}</title>
@@ -12,6 +14,9 @@ const Comic = ({comic: {title, alt, img, num}}) => {
             </span>
         </>
     );
+    const last = (latestComic)? latestComic.num : 0;
+    const pagination = (num) ? <Pagination num={num} latest={last}/> : null;
+
     return (
         <section className={style.comicContainer} data-testid={'comic'}>
             <div className={style.container}>
@@ -43,12 +48,22 @@ const Comic = ({comic: {title, alt, img, num}}) => {
                     </p>
                 </div>
             </div>
+            {pagination}
         </section>
     );
 };
 
-export default Comic;
-
 Comic.propTypes = {
-    comic: PropTypes.object.isRequired
+    comic: PropTypes.object.isRequired,
+    latestComic: PropTypes.object.isRequired
 };
+
+const mapStateToProps = state => {
+    return {
+        latestComic: state.latestComic
+    };
+};
+
+export default connect(
+    mapStateToProps
+)(Comic);
