@@ -9,12 +9,21 @@
 
     .imageCaptionContainer {
       display: block;
+      opacity: 1;
+      animation-name: fadeInOpacity;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 0.2s;
+      background-color: rgba(0, 0, 0, 0.9);
+      transition-delay: 0.5s;
     }
   }
 
   .imageCaptionContainer {
     text-align: center;
     display: none;
+    opacity: 0;
+    transition: 0s background-color;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -48,5 +57,14 @@
       color: #ccc;
       font-size: $small-font-size;
     }
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
