@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "98da2bf3f4405b81cecbae0f766194e3",
+    "revision": "a7a9e9088fb4bf5e263fbc5e0137d55e",
     "url": "/XKXC-comic-search/index.html"
   },
   {
-    "revision": "d713248e51fe83f80141",
+    "revision": "4782bca9341fdf4bc0a3",
     "url": "/XKXC-comic-search/static/css/2.9905d55a.chunk.css"
   },
   {
-    "revision": "df1d505d64d67f8769be",
+    "revision": "8c0a120b866870adb6d2",
     "url": "/XKXC-comic-search/static/css/main.ef031634.chunk.css"
   },
   {
-    "revision": "d713248e51fe83f80141",
-    "url": "/XKXC-comic-search/static/js/2.60b0854f.chunk.js"
+    "revision": "4782bca9341fdf4bc0a3",
+    "url": "/XKXC-comic-search/static/js/2.6ce8b650.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/XKXC-comic-search/static/js/2.60b0854f.chunk.js.LICENSE.txt"
+    "url": "/XKXC-comic-search/static/js/2.6ce8b650.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "df1d505d64d67f8769be",
-    "url": "/XKXC-comic-search/static/js/main.0aee8e85.chunk.js"
+    "revision": "8c0a120b866870adb6d2",
+    "url": "/XKXC-comic-search/static/js/main.46b1f167.chunk.js"
   },
   {
     "revision": "152ffa10cc3a9a8bd9bd",
