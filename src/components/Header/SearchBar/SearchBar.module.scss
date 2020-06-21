@@ -6,6 +6,9 @@
   -moz-transition: height 0.15s ease-out;
   -o-transition: height 0.15s ease-out;
   transition: height 0.15s ease-out;
+  color: $secondary;
+  padding-top: $spacer;
+  margin-bottom: ($spacer * 2)  * -1;
 
   &.searchBarShow {
     opacity: 1;

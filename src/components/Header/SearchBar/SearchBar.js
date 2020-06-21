@@ -17,10 +17,9 @@ const SearchBar = ({handleToggleSearchBar, comic}) => {
         return true;
     };
     const handleSearchComic = () => {
-        const id = inputSearch;
         setInputSearch('');
         handleToggleSearchBar(false);
-        return history.push(`/${id}`);
+        return history.push(`/${inputSearch}`);
     };
     const textInput = useRef(null);
     return (
@@ -49,7 +48,7 @@ const SearchBar = ({handleToggleSearchBar, comic}) => {
                     autoFocus
                     onKeyPress={event => {
                         if (event.key === 'Enter') {
-                            if(validateInputClass()){
+                            if (validateInputClass()) {
                                 handleSearchComic();
                             }
                         }
@@ -70,9 +69,9 @@ const SearchBar = ({handleToggleSearchBar, comic}) => {
             </div>
             <small
                 id="searchHelp"
-                className="form-text text-muted"
+                className={`${style['form-text']} ${style['text-muted']} animated fadeInLeft`}
             >
-                Search up to {comic.num} comics.
+                Search up to <strong>{comic.num}</strong> comics.
             </small>
         </div>
     );
