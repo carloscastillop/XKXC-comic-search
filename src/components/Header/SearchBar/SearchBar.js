@@ -37,7 +37,7 @@ const SearchBar = ({setToggleSearch, toggleSearch, comic}) => {
                     </span>
                 </div>
                 <input
-                    type='text'
+                    type='number'
                     className={`${style['form-control']} ${!validateInputClass() ? style['is-invalid'] : ''}`}
                     aria-label='Search comic by number'
                     aria-describedby='searchHelp'
