@@ -80,7 +80,7 @@ const SearchBar = ({handleToggleSearchBar, comic}) => {
 
 const mapStateToProps = state => {
     return {
-        comic: state.fetchComic
+        comic: state.latestComic
     };
 };
 

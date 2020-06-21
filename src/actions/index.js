@@ -1,4 +1,4 @@
-import {FETCH_COMIC, FETCH_ERROR} from './types';
+import {LATEST_COMIC, FETCH_COMIC, FETCH_ERROR} from './types';
 import axios from 'axios';
 
 const apiUrl = 'https://xkcd.now.sh/?comic='; //latest or 1000
@@ -7,6 +7,13 @@ export const fetchComic = (comics) => {
     return {
         type: FETCH_COMIC,
         comics
+    };
+};
+
+export const latestComic = (comic) => {
+    return {
+        type: LATEST_COMIC,
+        comic //data
     };
 };
 
@@ -29,6 +36,9 @@ export const fetchComics = (num = 'latest') => {
         })
             .then(response => {
                 dispatch(fetchComic(response.data));
+                if(num === 'latest'){
+                    dispatch(latestComic(response.data));
+                }
             })
             .catch(error => {
                 dispatch(fetchError(true));

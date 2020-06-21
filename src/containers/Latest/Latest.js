@@ -29,7 +29,7 @@ function Latest({comic, error}) {
 
 const mapStateToProps = state => {
     return {
-        comic: state.fetchComic,
+        comic: state.latestComic,
         error: state.fetchError
     };
 };
