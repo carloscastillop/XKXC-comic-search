@@ -21,6 +21,7 @@ const Image = ({imageSrc, imageTitle, imageAlt, imageCaption}) => {
                     alt={imageAlt}
                     title={imageTitle}
                     effect="blur"
+                    data-testid={'comic-image'}
                 />
                 {caption}
             </div>

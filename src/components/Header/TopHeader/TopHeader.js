@@ -17,6 +17,8 @@ const TopHeader = ({setToggleSearch, toggleSearch}) => {
                     title='Toogle search bar'
                     className={`${style.btn} ${style['btn-sm']} ${style['btn-outline-secondary']} ${style['mt-2']}`}
                     onClick={() => setToggleSearch(!toggleSearch)}
+                    data-testid={'toogle-search-btn'}
+                    id={'toogle-search-btn'}
                 >
                     {iconBtn}
                 </button>

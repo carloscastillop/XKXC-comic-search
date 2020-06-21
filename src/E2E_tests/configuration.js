@@ -1,5 +1,5 @@
 const config = {
-    url: 'http://localhost:3000/',
+    url: 'https://carloscastillop.github.io/XKXC-comic-search/',
     testSpeed: 0.8, //reduce to decimal to slow test down
 };
 

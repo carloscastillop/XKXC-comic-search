@@ -25,8 +25,13 @@ const Comic = ({comic: {title, alt, img, num}, latestComic}) => {
                     className={`${style.h2} ${style['my-4']} animated fadeInUp`}>
                     {title}
                 </h1>
-                <h4 className={'animated fadeIn'}>
-                    <span className={`${style['badge']} ${style['badge-secondary']}`}>
+                <h4
+                    className={'animated fadeIn'}
+                >
+                    <span
+                        data-testid={'comic-number'}
+                        className={`${style['badge']} ${style['badge-secondary']}`}
+                    >
                         #{num}
                     </span>
                 </h4>
@@ -45,7 +50,9 @@ const Comic = ({comic: {title, alt, img, num}, latestComic}) => {
                     </a>
                 </div>
                 <div>
-                    <p className={'animated fadeInUp'}>
+                    <p
+                        data-testid={'comic-alt'}
+                        className={'animated fadeInUp'}>
                         {alt}
                     </p>
                 </div>

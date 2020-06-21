@@ -1,5 +1,6 @@
 import config from './configuration';
 import { userCheckLatestComic } from './Journeys/userCheckLatestComic';
+import {userSearch} from './Stories/searchBar';
 // Pages > Stories > Journeys
 
 fixture
@@ -8,4 +9,8 @@ fixture
 
 test('User check Latest comic', async () => {
     userCheckLatestComic();
+});
+
+test('User search comic', async () => {
+    userSearch();
 });

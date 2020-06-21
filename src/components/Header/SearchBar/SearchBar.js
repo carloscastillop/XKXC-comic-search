@@ -45,6 +45,7 @@ const SearchBar = ({setToggleSearch, toggleSearch, comic}) => {
                     value={inputSearch}
                     onChange={e => setInputSearch(e.target.value)}
                     ref={textInput}
+                    data-testid={'search-comic-input'}
                     autoFocus
                     onKeyPress={event => {
                         if (event.key === 'Enter') {
