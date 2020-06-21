@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a28d8a0698ff5a10f3ab256072d3ca6",
+    "revision": "b9dcb6ef99574ec98cdf422f3b943a07",
     "url": "/XKXC-comic-search/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/XKXC-comic-search/static/css/2.9905d55a.chunk.css"
   },
   {
-    "revision": "a47c58cac3e9468147a7",
+    "revision": "a5d5f4bb8074ab7b778a",
     "url": "/XKXC-comic-search/static/css/main.ef031634.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/XKXC-comic-search/static/js/2.2be448af.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a47c58cac3e9468147a7",
-    "url": "/XKXC-comic-search/static/js/main.1026120e.chunk.js"
+    "revision": "a5d5f4bb8074ab7b778a",
+    "url": "/XKXC-comic-search/static/js/main.60ae4b6d.chunk.js"
   },
   {
     "revision": "152ffa10cc3a9a8bd9bd",
