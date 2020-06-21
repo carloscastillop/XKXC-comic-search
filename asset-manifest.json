@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/XKXC-comic-search/static/css/main.ef031634.chunk.css",
-    "main.js": "/XKXC-comic-search/static/js/main.c5231280.chunk.js",
-    "main.js.map": "/XKXC-comic-search/static/js/main.c5231280.chunk.js.map",
+    "main.js": "/XKXC-comic-search/static/js/main.7ca21856.chunk.js",
+    "main.js.map": "/XKXC-comic-search/static/js/main.7ca21856.chunk.js.map",
     "runtime-main.js": "/XKXC-comic-search/static/js/runtime-main.cdd6f23c.js",
     "runtime-main.js.map": "/XKXC-comic-search/static/js/runtime-main.cdd6f23c.js.map",
     "static/css/2.9905d55a.chunk.css": "/XKXC-comic-search/static/css/2.9905d55a.chunk.css",
     "static/js/2.29e9715b.chunk.js": "/XKXC-comic-search/static/js/2.29e9715b.chunk.js",
     "static/js/2.29e9715b.chunk.js.map": "/XKXC-comic-search/static/js/2.29e9715b.chunk.js.map",
     "index.html": "/XKXC-comic-search/index.html",
-    "precache-manifest.259895c6c456f6d3e8d162abecb3b7d1.js": "/XKXC-comic-search/precache-manifest.259895c6c456f6d3e8d162abecb3b7d1.js",
+    "precache-manifest.489b8256c24e31417039bfc0cb87dde8.js": "/XKXC-comic-search/precache-manifest.489b8256c24e31417039bfc0cb87dde8.js",
     "service-worker.js": "/XKXC-comic-search/service-worker.js",
     "static/css/2.9905d55a.chunk.css.map": "/XKXC-comic-search/static/css/2.9905d55a.chunk.css.map",
     "static/css/main.ef031634.chunk.css.map": "/XKXC-comic-search/static/css/main.ef031634.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.9905d55a.chunk.css",
     "static/js/2.29e9715b.chunk.js",
     "static/css/main.ef031634.chunk.css",
-    "static/js/main.c5231280.chunk.js"
+    "static/js/main.7ca21856.chunk.js"
   ]
 }
