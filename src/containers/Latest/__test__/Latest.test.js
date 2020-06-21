@@ -5,7 +5,8 @@ import {Provider} from 'react-redux';
 import rootReducer from '../../../reducers';
 import {applyMiddleware, createStore} from 'redux';
 import thunk from 'redux-thunk';
-import {fetchComic, fetchComics} from '../../../actions';
+import {fetchComic} from '../../../actions';
+import renderer from 'react-test-renderer';
 
 const comic = {
     month: '6',
@@ -35,4 +36,15 @@ test('Rendering Latest', () => {
 
     const linkElement = getByTestId('latest');
     expect(linkElement).toBeInTheDocument();
+});
+
+test('Latest comic snapshop', () => {
+    const tree = renderer
+        .create(
+            <Provider store={store}>
+                <Latest/>
+            </Provider>
+        )
+        .toJSON();
+    expect(tree).toMatchSnapshot();
 });

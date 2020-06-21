@@ -7,6 +7,7 @@ import {applyMiddleware, createStore} from 'redux';
 import thunk from 'redux-thunk';
 import {fetchComic} from '../../../actions';
 import {Route, MemoryRouter} from 'react-router-dom';
+import renderer from 'react-test-renderer';
 
 
 const comic = {
@@ -41,4 +42,19 @@ test('Rendering search result', () => {
 
     const linkElement = getByTestId('search-result');
     expect(linkElement).toBeInTheDocument();
+});
+
+test('Search result comic snapshop', () => {
+    const tree = renderer
+        .create(
+            <Provider store={store}>
+                <MemoryRouter initialEntries={['/1']}>
+                    <Route path='/:num'>
+                        <Latest/>
+                    </Route>
+                </MemoryRouter>
+            </Provider>
+        )
+        .toJSON();
+    expect(tree).toMatchSnapshot();
 });
