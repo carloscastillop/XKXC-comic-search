@@ -12,7 +12,7 @@ import SearchResult from '../SearchResult/SearchResult';
 
 function App() {
     return (
-        <HashRouter basename='/XKXC-comic-search/'>
+        <HashRouter basename='/'>
             <div className={style.App} data-testid={'App'}>
                 <Header/>
                 <Switch>
