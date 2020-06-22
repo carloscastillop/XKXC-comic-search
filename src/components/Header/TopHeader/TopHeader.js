@@ -2,7 +2,7 @@ import React from 'react';
 import style from './TopHeader.module.scss';
 import PropTypes from 'prop-types';
 import Logo from '../Logo/Logo';
-import Button from "../../Button/Button";
+import Button from '../../Button/Button';
 
 const TopHeader = ({setToggleSearch, toggleSearch}) => {
     let iconBtn = (<i className='fas fa-search'></i>);
