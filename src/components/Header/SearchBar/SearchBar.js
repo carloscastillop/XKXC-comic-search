@@ -3,6 +3,7 @@ import style from './SearchBar.module.scss';
 import {useHistory} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import Button from '../../Button/Button';
 
 const SearchBar = ({setToggleSearch, toggleSearch, comic}) => {
     const [inputSearch, setInputSearch] = useState('');
@@ -56,16 +57,15 @@ const SearchBar = ({setToggleSearch, toggleSearch, comic}) => {
                     }}
                 />
                 <div className={`${style['input-group-append']}`}>
-                    <button
-                        className={`${style['btn']} ${style['btn-secondary']} ${(!validateInputClass()) ? style['disabled'] : ''}`}
-                        id='searchBarBtn'
-                        aria-label='Search comic'
-                        title='Search comic'
+                    <Button
+                        id={'searchBarBtn'}
+                        title={'Search comic'}
+                        label={'Search comic'}
                         disabled={(!validateInputClass()) ? true : false}
-                        onClick={() => handleSearchComic()}
-                    >
-                        <i className='fas fa-search'></i>
-                    </button>
+                        click={() => handleSearchComic()}
+                        icon={(<i className='fas fa-search'></i>)}
+                        css={`${style['btn']} ${style['btn-secondary']} ${(!validateInputClass()) ? style['disabled'] : ''}`}
+                    />
                 </div>
             </div>
             <small
