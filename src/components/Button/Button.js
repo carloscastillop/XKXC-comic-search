@@ -11,7 +11,7 @@ const Button = ({id, label, title, disabled = false, click, css, icon, testId}) 
             title={title}
             disabled={disabled}
             onClick={click}
-            data-testId={testId}
+            data-testid={testId}
         >
             {icon}
         </button>
