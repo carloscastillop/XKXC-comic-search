@@ -1,7 +1,8 @@
 import {LATEST_COMIC, FETCH_COMIC, FETCH_ERROR} from './types';
 import axios from 'axios';
+import appConfig from '../config';
 
-const apiUrl = 'https://xkcd.now.sh/?comic='; //latest or 1000
+const apiUrl = appConfig.api.url; //latest or 1000
 
 export const fetchComic = (comic) => {
     return {

@@ -4,6 +4,7 @@ import Image from './Image/Image';
 import PropTypes from 'prop-types';
 import Pagination from './Pagination/Pagination';
 import {connect} from 'react-redux';
+import appConfig from '../../config';
 
 const Comic = ({comic: {title, alt, img, num}, latestComic}) => {
     const caption = (
@@ -37,7 +38,7 @@ const Comic = ({comic: {title, alt, img, num}, latestComic}) => {
                 </h4>
                 <div className={style['mb-3']}>
                     <a
-                        href={`//xkcd.com/${num}`}
+                        href={`${appConfig.comic.url}${num}`}
                         title={title}
                         rel="noreferrer"
                     >
